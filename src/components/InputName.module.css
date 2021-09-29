@@ -1,0 +1,21 @@
+.InputWrapper{
+    min-width: 30%;
+    /* background-color: aquamarine; */
+
+}
+
+.InputName{
+    box-sizing:border-box;
+    width: 100%;
+    min-width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid rgba(0,0,0,.4);
+    border-radius: 10px;
+    
+}
+
+.InputName:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+   }

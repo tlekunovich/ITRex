@@ -1,0 +1,12 @@
+.AppWrapper{
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.filter{
+    display: flex;
+    font-display: row;
+    justify-content: space-between;
+}
+

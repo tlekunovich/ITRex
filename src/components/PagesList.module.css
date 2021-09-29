@@ -1,0 +1,27 @@
+.Pages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: blueviolet; */
+    margin-top: 10px;
+
+}
+.pagesWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color:cadetblue; */
+    min-width: 150px;
+}
+.pagesElem{
+    border: 1px solid black;
+    padding:2px 10px;
+    margin-right: 1px;
+    cursor: pointer;
+}
+
+.pagesElem:active{
+    font-weight: bold;
+}
+
