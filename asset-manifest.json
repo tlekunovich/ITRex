@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ITRex/static/css/main.69238680.chunk.css",
+    "main.js": "/ITRex/static/js/main.cf492c3b.chunk.js",
+    "main.js.map": "/ITRex/static/js/main.cf492c3b.chunk.js.map",
+    "runtime-main.js": "/ITRex/static/js/runtime-main.d0666751.js",
+    "runtime-main.js.map": "/ITRex/static/js/runtime-main.d0666751.js.map",
+    "static/js/2.8c6b50a3.chunk.js": "/ITRex/static/js/2.8c6b50a3.chunk.js",
+    "static/js/2.8c6b50a3.chunk.js.map": "/ITRex/static/js/2.8c6b50a3.chunk.js.map",
+    "static/js/3.dcab9bee.chunk.js": "/ITRex/static/js/3.dcab9bee.chunk.js",
+    "static/js/3.dcab9bee.chunk.js.map": "/ITRex/static/js/3.dcab9bee.chunk.js.map",
+    "index.html": "/ITRex/index.html",
+    "static/css/main.69238680.chunk.css.map": "/ITRex/static/css/main.69238680.chunk.css.map",
+    "static/js/2.8c6b50a3.chunk.js.LICENSE.txt": "/ITRex/static/js/2.8c6b50a3.chunk.js.LICENSE.txt",
+    "static/media/arrow.c8925635.svg": "/ITRex/static/media/arrow.c8925635.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0666751.js",
+    "static/js/2.8c6b50a3.chunk.js",
+    "static/css/main.69238680.chunk.css",
+    "static/js/main.cf492c3b.chunk.js"
+  ]
+}
