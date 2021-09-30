@@ -10,11 +10,6 @@ export const setInputNameAction = (data) => ({
     data: data
 });
 
-// export const setFilteredByNameAction = (data) => ({
-//     type: CONSTANTS.SET_FILTERED_BY_NAME,
-//     data: data
-// });
-
 export const setPageAction = (data) => ({
     type: CONSTANTS.SET_PAGE,
     data: data

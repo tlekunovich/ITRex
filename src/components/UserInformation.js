@@ -14,7 +14,7 @@ const UserInformation = (props) => {
         </div>
         : 
         <div className={style.UserInformationWrapper} >
-            <div className={style.infoItem}>Profile Info</div>
+            <div className={style.infoItemMain}>Profile Info</div>
            <div className={style.infoItem}>Selected profile:{userInfo.firstName} {userInfo.lastName}</div> 
            <div className={style.infoItem}>Description:{userInfo.description}</div>
            <div className={style.infoItem}>Adress:{userInfo.adress.streetAddress} </div>

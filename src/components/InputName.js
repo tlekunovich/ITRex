@@ -1,11 +1,9 @@
 import React from 'react'
 import style from './InputName.module.css'
-// import { useState } from 'react'
 import {connect} from 'react-redux';
 import {setInputNameAction} from './store/actions';
 
 const InputName = (props) => {
-    // {setInputName,inputName,setFilteredByName}
  
     return (
         <div className={style.InputWrapper} >

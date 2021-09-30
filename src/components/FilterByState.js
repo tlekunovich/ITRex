@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {setUserInfoAction} from './store/actions';
 
 const FilterByState = (props) => {
-    const {inputState,setInputState}=props
+   
     const [subMenu,setSubMenu]=useState(false) 
 
     const menuItem = [
@@ -17,12 +17,6 @@ const FilterByState = (props) => {
              
     ]
     
-
-useEffect (()=>{
-
-console.log(inputState)
-
-},[inputState])
 
     return (
         <div>
@@ -36,14 +30,14 @@ console.log(inputState)
                 ? 
                 <div className={style.MenuToggle}>
                     <ul>
-                        <li className={style.MenuToggleItem}  onClick={()=>{setInputState(''); setSubMenu(!subMenu)}}>
+                        <li className={style.MenuToggleItem}  onClick={()=>{props.setInputState(''); setSubMenu(!subMenu)}}>
                             none
                         </li>
-                        {menuItem.map((elem,index)=>{
+                        {menuItem.map((elem)=>{
                             return(
                                 <li key={elem.id} 
                                     className={style.MenuToggleItem} 
-                                    onClick={()=>{setInputState(elem); setSubMenu(!subMenu)}}
+                                    onClick={()=>{props.setInputState(elem); setSubMenu(!subMenu)}}
                                 >
                                     {elem.text}
                                 </li>

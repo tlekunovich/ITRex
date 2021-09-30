@@ -6,8 +6,7 @@ import { setUsersDataAction, setInputNameAction,setPageAction, setSortedParamAct
 
 
 const Table = (props) => {
-//  const {sortedParam, setSortedParam,setPage,data,setUserInfo,inputName} = props
-console.log(props)
+
 const table = [
    {key:'id', title: 'id'},
    {key:'firstName', title: 'First name'},
@@ -21,8 +20,7 @@ const table = [
         props.setSortedParam(key)
         props.setPage(0)
     }
-    // if(!data||data.length<=0){return false}
-    // console.log(data.length)
+
     return (
        
        <div className={style.tableWrapper} >

@@ -76,12 +76,13 @@ const localPaginationData = sortedForParams.reduce((acc,elArr)=>{
     acc.push([]);
   }
   acc[acc.length-1].push(elArr);
+  
   return acc;
 }, [[]]);
 
 
 const countPages = [...Array(localPaginationData.length).keys()]
-
+console.log('cdfdf',localPaginationData)
 const isActivePage = localPaginationData.length < props.page ? 0 : props.page;
 
 if(props.usersData.length<=0){return false}
@@ -95,7 +96,8 @@ if(props.usersData.length<=0){return false}
         />
       </div>
         <Table data = {localPaginationData[isActivePage]} />
-        <PagesList countPages={countPages} />
+        <PagesList countPages={countPages}
+        localPaginationData={localPaginationData} />
         <UserInformation />
     </div>
   );
@@ -104,10 +106,8 @@ if(props.usersData.length<=0){return false}
 
 const mapStateToProps = (state) => {
   return {
-    // reducers: state.Reducers,
     usersData:state.usersData,
     inputName:state.inputName,
-    // filteredByName:state.filteredByName,
     page: state.page,
     sortedParam: state.sortedParam,
     userInfo: state.userInfo,
@@ -122,9 +122,6 @@ const mapDispatchToProps = (dispatch) => {
     setInputName(value) {
       dispatch(setInputNameAction(value))
     },
-    // setFilteredByName(value) {
-    //   dispatch(setFilteredByNameAction(value))
-    // },
     setPage(value) {
       dispatch(setPageAction(value))
     },
