@@ -11,13 +11,7 @@ import { setUsersDataAction, setInputNameAction, setPageAction, setSortedParamAc
 
 function App(props) {
   
-// const [usersData, setUsersData] = useState([])
 const [inputState, setInputState] = useState('')
-// const [filteredByName, setFilteredByName] = useState('')
-// const [page, setPage] = useState(0)
-// const [sortedParam, setSortedParam] = useState('id')
-// const [userInfo, setUserInfo] = useState (null)
-
 
   const requestToTheServer = async () => {
 
@@ -25,13 +19,11 @@ const [inputState, setInputState] = useState('')
     try{
       let resp = await fetch(url);
       resp = await resp.json();
-      console.log('resp', resp);
       props.setUsersData(resp);
   } catch (e) {
       console.log('error')
   }
-
-      }
+}
   
 
 useEffect(()=>{
@@ -44,6 +36,7 @@ useEffect(()=>{
      elem.firstName.toLowerCase().indexOf(props.inputName.toLocaleLowerCase()) === 0
    )
  })
+
 
 let  typeArr = props.inputName.length > 0 ? resultFilterByName: props.usersData 
 
@@ -82,7 +75,7 @@ const localPaginationData = sortedForParams.reduce((acc,elArr)=>{
 
 
 const countPages = [...Array(localPaginationData.length).keys()]
-console.log('cdfdf',localPaginationData)
+
 const isActivePage = localPaginationData.length < props.page ? 0 : props.page;
 
 if(props.usersData.length<=0){return false}
@@ -91,13 +84,14 @@ if(props.usersData.length<=0){return false}
       <div className={style.filter}>
         <InputName />
         <FilterByState 
-        setInputState ={setInputState}
-        inputState={inputState}
+          setInputState ={setInputState}
+          inputState={inputState}
         />
       </div>
         <Table data = {localPaginationData[isActivePage]} />
-        <PagesList countPages={countPages}
-        localPaginationData={localPaginationData} />
+        <PagesList 
+          countPages={countPages}
+          localPaginationData={localPaginationData} />
         <UserInformation />
     </div>
   );
